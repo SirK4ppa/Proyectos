@@ -66,7 +66,7 @@ using namespace std;
 void Menu::iniciarMenu() 
 {
     system("cls");
-    cout<<"Que figura geometrica desea dibujar? "<<endl<<endl<<"1.- Cuadrado"<<endl<<"2.- Triangulo"<<endl<<"3.- Rectangulo"<<endl<<"\nR = ";
+    cout<<"Escoja una figura geometrica (Valor numerico)"<<endl<<endl<<"1.- Cuadrado"<<endl<<"2.- Triangulo"<<endl<<"3.- Rectangulo"<<endl<<"\nR = ";
 
     cin>>opcion; 
 
