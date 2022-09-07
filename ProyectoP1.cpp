@@ -22,20 +22,20 @@ using namespace std;
     class Triangulo : public FG
     {
     public:
-        void dibujarTriangulo(int, int, int );
+        void drawTriangulo(int, int, int );
     };
 
     class Rectangulo : public FG 
     {
     public:
         int ancho;
-        void dibujarRectangulo(int, int, int, int);
+        void drawRectangulo(int, int, int, int);
     };
     class Cuadrado : public FG
     {
     public:
         int Vacio;
-        void dibujarCuadrado(int, int, int, int);
+        void drawCuadrado(int, int, int, int);
 
     };
 
@@ -48,9 +48,9 @@ using namespace std;
 
 
     Menu InputManager;
-    Cuadrado objetoCuadrado;
-    Triangulo objetoTriangulo;
-    Rectangulo objetoRectangulo;
+    Cuadrado objCuadrado;
+    Triangulo objTriangulo;
+    Rectangulo objRect;
 
     int main()
     {
@@ -74,21 +74,21 @@ void Menu::iniciarMenu()
     {
         system("cls");
         cout<<"Ingrese la longitud de su cuadrado a continuacion\n\nR = ";
-        cin>>objetoCuadrado.Longitud;
+        cin>>objCuadrado.Longitud;
 
         system("cls");
         cout<<"1.- Vacio"<<endl<<"2.- Lleno"<<endl;
-        cin>>objetoCuadrado.Vacio;
+        cin>>objCuadrado.Vacio;
 
         system("cls");
         cout<<"Ingrese una coordenada X"<<endl;
-        cin>>objetoCuadrado.CoordX;
+        cin>>objCuadrado.CoordX;
 
         system("cls");
         cout<<"Ingrese una coordenada Y"<<endl;
-        cin>>objetoCuadrado.CoordY;
+        cin>>objCuadrado.CoordY;
 
-        objetoCuadrado.dibujarCuadrado(objetoCuadrado.Longitud, objetoCuadrado.Vacio, objetoCuadrado.CoordX, objetoCuadrado.CoordY);
+        objCuadrado.drawCuadrado(objCuadrado.Longitud, objCuadrado.Vacio, objCuadrado.CoordX, objCuadrado.CoordY);
 
     }
 
@@ -96,45 +96,45 @@ void Menu::iniciarMenu()
     {
         system("cls");
         cout<<"Ingrese la longitud de su Triangulo a continuacion\n\nR = ";
-        cin>>objetoTriangulo.Longitud;
+        cin>>objTriangulo.Longitud;
 
         system("cls");
         cout<<"Ingrese una coordenada X"<<endl;
-        cin>>objetoTriangulo.CoordX;
+        cin>>objTriangulo.CoordX;
 
         system("cls");
         cout<<"Ingrese una coordenada Y"<<endl;
-        cin>>objetoTriangulo.CoordY;
+        cin>>objTriangulo.CoordY;
 
-        objetoTriangulo.dibujarTriangulo(objetoTriangulo.Longitud, objetoTriangulo.CoordX, objetoTriangulo.CoordY);
+        objTriangulo.drawTriangulo(objTriangulo.Longitud, objTriangulo.CoordX, objTriangulo.CoordY);
 
     }
     if (opcion == 3)
     {
         system("cls");
         cout<<"Ingrese el largo de su rectangulo a continuacion\n\nR = ";
-        cin>>objetoRectangulo.Longitud;
+        cin>>objRect.Longitud;
 
         system("cls");
         cout<<"Ingrese el alto de su rectangulo a continuacion\n\nR = ";
-        cin>>objetoRectangulo.ancho;
+        cin>>objRect.ancho;
 
         system("cls");
         cout<<"Ingrese una coordenada X"<<endl;
-        cin>>objetoRectangulo.CoordX;
+        cin>>objRect.CoordX;
 
         system("cls");
         cout<<"Ingrese una coordenada Y"<<endl;
-        cin>>objetoRectangulo.CoordY;
+        cin>>objRect.CoordY;
 
-        objetoRectangulo.dibujarRectangulo(objetoRectangulo.Longitud, objetoRectangulo.ancho, objetoRectangulo.CoordX, objetoRectangulo.CoordY);
+        objRect.drawRectangulo(objRect.Longitud, objRect.ancho, objRect.CoordX, objRect.CoordY);
 
     }
              
 
 }
 
-void Cuadrado::dibujarCuadrado(int Longitud, int Vacio, int CoordX, int CoordY) 
+void Cuadrado::drawCuadrado(int Longitud, int Vacio, int CoordX, int CoordY) 
 {
     for (size_t i = 0; i < 1000000; i++)
     { 
@@ -224,22 +224,22 @@ void Cuadrado::dibujarCuadrado(int Longitud, int Vacio, int CoordX, int CoordY)
             if (KeyWord == 'A' || KeyWord == 'a')
             {
                 CoordX = CoordX - 1;
-                objetoCuadrado.dibujarCuadrado(Longitud, Vacio, CoordX, CoordY);
+                objCuadrado.drawCuadrado(Longitud, Vacio, CoordX, CoordY);
             }
             if (KeyWord == 'S' || KeyWord == 's')
             {
                 CoordY = CoordY + 1;
-                objetoCuadrado.dibujarCuadrado(Longitud, Vacio, CoordX, CoordY);
+                objCuadrado.drawCuadrado(Longitud, Vacio, CoordX, CoordY);
             }
             if (KeyWord == 'D'|| KeyWord == 'd')
             {
                 CoordX = CoordX + 1;
-                objetoCuadrado.dibujarCuadrado(Longitud, Vacio, CoordX, CoordY);
+                objCuadrado.drawCuadrado(Longitud, Vacio, CoordX, CoordY);
             }
             if (KeyWord == 'W' || KeyWord == 'w')
             {   
                 CoordY = CoordY - 1;
-                objetoCuadrado.dibujarCuadrado(Longitud, Vacio, CoordX, CoordY);
+                objCuadrado.drawCuadrado(Longitud, Vacio, CoordX, CoordY);
             }
 
             if (KeyWord == 'L' || KeyWord == 'l')
@@ -253,7 +253,7 @@ void Cuadrado::dibujarCuadrado(int Longitud, int Vacio, int CoordX, int CoordY)
 
 }
 
-void Triangulo::dibujarTriangulo(int Longitud, int CoordX, int CoordY)
+void Triangulo::drawTriangulo(int Longitud, int CoordX, int CoordY)
 {
 
     int contador = 0;
@@ -323,22 +323,22 @@ void Triangulo::dibujarTriangulo(int Longitud, int CoordX, int CoordY)
             if (KeyWord == 'A' || KeyWord == 'a')
             {
                 CoordX = CoordX - 1;
-                objetoTriangulo.dibujarTriangulo(Longitud, CoordX, CoordY);
+                objTriangulo.drawTriangulo(Longitud, CoordX, CoordY);
             }
             if (KeyWord == 'S' || KeyWord == 's')
             {
                 CoordY = CoordY + 1;
-                objetoTriangulo.dibujarTriangulo(Longitud, CoordX, CoordY);
+                objTriangulo.drawTriangulo(Longitud, CoordX, CoordY);
             }
             if (KeyWord == 'D' || KeyWord == 'd')
             {
                 CoordX = CoordX + 1;
-                objetoTriangulo.dibujarTriangulo(Longitud, CoordX, CoordY);
+                objTriangulo.drawTriangulo(Longitud, CoordX, CoordY);
             }
             if (KeyWord == 'W' || KeyWord == 'w')
             {
                 CoordY = CoordY - 1;
-                objetoTriangulo.dibujarTriangulo(Longitud, CoordX, CoordY);
+                objTriangulo.drawTriangulo(Longitud, CoordX, CoordY);
             }
 
             if (KeyWord == 'L'|| KeyWord == 'l')
@@ -352,7 +352,7 @@ void Triangulo::dibujarTriangulo(int Longitud, int CoordX, int CoordY)
 
 }
 
-void Rectangulo::dibujarRectangulo(int Longitud, int ancho, int CoordX, int CoordY)
+void Rectangulo::drawRectangulo(int Longitud, int ancho, int CoordX, int CoordY)
 {
     for (size_t i = 0; i < 1000000; i++)
     {
@@ -411,22 +411,22 @@ void Rectangulo::dibujarRectangulo(int Longitud, int ancho, int CoordX, int Coor
             if (KeyWord == 'A' || KeyWord == 'a')
             {
                 CoordX = CoordX - 1;
-                objetoRectangulo.dibujarRectangulo(Longitud, ancho, CoordX, CoordY);
+                objRect.drawRectangulo(Longitud, ancho, CoordX, CoordY);
             }
             if (KeyWord == 'S' || KeyWord == 's')
             {
                 CoordY = CoordY + 1;
-                objetoRectangulo.dibujarRectangulo(Longitud, ancho, CoordX, CoordY);
+                objRect.drawRectangulo(Longitud, ancho, CoordX, CoordY);
             }
             if (KeyWord == 'D' || KeyWord == 'd')
             {
                 CoordX = CoordX + 1;
-                objetoRectangulo.dibujarRectangulo(Longitud, ancho, CoordX, CoordY);
+                objRect.drawRectangulo(Longitud, ancho, CoordX, CoordY);
             }
             if (KeyWord == 'W' || KeyWord == 'w')
             {
                 CoordY = CoordY - 1;
-                objetoRectangulo.dibujarRectangulo(Longitud, ancho, CoordX, CoordY);
+                objRect.drawRectangulo(Longitud, ancho, CoordX, CoordY);
             }
 
             if (KeyWord == 'L' || KeyWord == 'l')
