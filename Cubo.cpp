@@ -62,7 +62,7 @@ int main() {
     memset(zBuffer, 0, width * height * 4);
     cubeWidth = 20;
     horizontalOffset = -2 * cubeWidth;
-    // first cube
+            // Primer cubo
     for (float cubeX = -cubeWidth; cubeX < cubeWidth; cubeX += incrementSpeed) {
       for (float cubeY = -cubeWidth; cubeY < cubeWidth;
            cubeY += incrementSpeed) {
@@ -76,7 +76,7 @@ int main() {
     }
     cubeWidth = 10;
     horizontalOffset = 1 * cubeWidth;
-    // second cube
+            // Segundo cubo
     for (float cubeX = -cubeWidth; cubeX < cubeWidth; cubeX += incrementSpeed) {
       for (float cubeY = -cubeWidth; cubeY < cubeWidth;
            cubeY += incrementSpeed) {
@@ -90,7 +90,7 @@ int main() {
     }
     cubeWidth = 5;
     horizontalOffset = 8 * cubeWidth;
-    // third cube
+          //Tercer cubo
     for (float cubeX = -cubeWidth; cubeX < cubeWidth; cubeX += incrementSpeed) {
       for (float cubeY = -cubeWidth; cubeY < cubeWidth;
            cubeY += incrementSpeed) {
