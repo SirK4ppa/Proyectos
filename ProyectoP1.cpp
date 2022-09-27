@@ -66,14 +66,14 @@ using namespace std;
 void Menu::iniciarMenu() 
 {
     system("cls");
-    cout<<"Escoja una figura geometrica (Valor numerico)"<<endl<<endl<<"1.- Cuadrado"<<endl<<"2.- Triangulo"<<endl<<"3.- Rectangulo"<<endl<<"\nR = ";
+    cout<<"Escoja una figura geometrica (Valor numerico)"<<endl<<endl<<"1.- Cuadrado"<<endl<<"2.- Triangulo"<<endl<<"3.- Rectangulo"<<endl<<"\nRespuesta: ";
 
     cin>>opcion; 
 
     if (opcion == 1)
     {
         system("cls");
-        cout<<"Ingrese la longitud de su cuadrado a continuacion\n\nR = ";
+        cout<<"Ingrese la longitud de su cuadrado a continuacion\n\nRespuesta: ";
         cin>>objCuadrado.Longitud;
 
         system("cls");
@@ -95,7 +95,7 @@ void Menu::iniciarMenu()
     if (opcion == 2)
     {
         system("cls");
-        cout<<"Ingrese la longitud de su Triangulo a continuacion\n\nR = ";
+        cout<<"Ingrese la longitud de su Triangulo a continuacion\n\nRespuesta: ";
         cin>>objTriangulo.Longitud;
 
         system("cls");
@@ -112,11 +112,11 @@ void Menu::iniciarMenu()
     if (opcion == 3)
     {
         system("cls");
-        cout<<"Ingrese el largo de su rectangulo a continuacion\n\nR = ";
+        cout<<"Ingrese el largo de su rectangulo a continuacion\n\nRespuesta: ";
         cin>>objRect.Longitud;
 
         system("cls");
-        cout<<"Ingrese el alto de su rectangulo a continuacion\n\nR = ";
+        cout<<"Ingrese el alto de su rectangulo a continuacion\n\nRespuesta: ";
         cin>>objRect.ancho;
 
         system("cls");
